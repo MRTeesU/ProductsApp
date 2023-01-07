@@ -12,9 +12,17 @@ namespace BaseApp.Models
         public User()
         {
         }
-        public int Id { get; set; }
+
+        public User(int id, string name, string role)
+        {
+            UserId = id;
+            Name = name;
+            Role = role;
+        }
+        public int UserId { get; set; }
         public string Name { get; set; }
         [Required]
         public string Role { get; set; }
     }
+
 }

@@ -15,14 +15,14 @@ namespace BaseApp.Models
         }
         public Product(int id, string name, string description, int? price, bool inStock) :this()
         {
-            Id = id;
+            ProductId = id;
             Name = name;
             Description = description;
             Price = price;
             InStock = inStock;
         }
 
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
