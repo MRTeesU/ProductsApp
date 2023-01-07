@@ -20,7 +20,10 @@ namespace BaseApp.Models
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            //allows Order class to not have primary key of its own
             base.OnModelCreating(builder);
+            builder.Entity<Order>()
+                .HasKey(a => new { a.ProductId, a.UserId });
 
             builder.Entity<Product>().HasData(
                 new Product { ProductId = 1, Name = "Example Product 1", Description = "Example ",Price = 1 ,InStock = true },
