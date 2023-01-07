@@ -13,7 +13,8 @@ namespace BaseApp.Models
         public DbSet<User> Users{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) =>
-            options.UseSqlServer(@"Server={localdb}\mssqllocaldb;Database=Products;");
+        options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Products;");
+        //options.UseSqlServer(@"Server=(localdb)\ProjectsV13;Database=Products;");
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
